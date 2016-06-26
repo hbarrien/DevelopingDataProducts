@@ -1,0 +1,59 @@
+ BMI Calculator
+========================================================
+author: Herbert Barrientos
+date: 2016-06-24   
+
+Your next step to good health!   
+Service provided by the Health Corner
+
+Are you worried about your weight?
+========================================================
+
+Overweight and obesity may cause a number of health problems.   
+   
+Among the most common are:   
+- Cardiovascular disease
+- Some types of cancer
+- Diabetes
+- Osteoarthritis
+- Breathing difficulties
+
+Your first step: discover your health risk
+========================================================
+
+The **Body Mass Index**, or **BMI**, is a value that is calculated by providing a your height and weight.   
+   
+The BMI lands on one of three "weight index ranges" that tell you if your weight is normal (low risk), overweight (medium risk) or obese (high risk).   
+   
+This information is crucial in determining various treatments that will help you maintain a good health.
+   
+Your next step: take action!
+========================================================
+
+The Health Corner presents you with the **BMI Calculator**, a novel online service to determine your health risk factor :   
+- Easy to use: just provide your height in cm. and weight in kg.
+- The response is immediate, easy to read and understand
+- Instructions for use and risk information are provided
+- Use it on your computer or mobile device
+- The service is available 24 x 7 x 365
+- It's free!
+- Available at: https://hpbarr.shinyapps.io/shiny-bmi/
+
+Want to know how it's done?
+========================================================
+
+Here's an example to show you the magic.
+
+```{r}
+# Create the output data frame 
+bmidf      <- data.frame(1, 2)
+bmidf[1,1] <- "BMI"
+
+# Hypothetical height=170 cm.; weight=65 kg.
+ht <- 170; wt <- 65
+
+# Perfom the BMI calculation and show results
+bmi        <- wt / (ht / 100)^2
+bmidf[1,2] <- as.integer(bmi)
+bmidf
+```
